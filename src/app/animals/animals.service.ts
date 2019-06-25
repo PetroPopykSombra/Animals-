@@ -1,0 +1,21 @@
+import { HttpParams } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/internal/Observable';
+import { HttpService } from '../shared/services/http.service';
+import { Animal } from './animals.model';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AnimalsService {
+
+  constructor(
+    private httpService: HttpService,
+  ) {}
+
+  getAnimals(pageNumber: number): Observable<object> {
+    let params = new HttpParams();
+    params = params.append('_page', pageNumber.toString());
+    return this.httpService.get<Animal[]>(`animals`, params);
+  }
+}

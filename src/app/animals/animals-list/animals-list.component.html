@@ -1,0 +1,47 @@
+<section class="animals-list page">
+  <mat-card>
+    <h1>Filters</h1>
+
+    <mat-card-content>
+      <form [formGroup]="form" class="animals-list--form">
+        <mat-form-field>
+          <input matInput formControlName="name" placeholder="Name/Breed">
+        </mat-form-field>
+
+        <mat-radio-group aria-label="Gender" formControlName="gender">
+          <mat-radio-button [value]="animalGenderEnum.MALE">Male</mat-radio-button>
+          <mat-radio-button [value]="animalGenderEnum.FEMALE">Female</mat-radio-button>
+          <mat-radio-button [value]="animalGenderEnum.ALL">All</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group aria-label="Type" formControlName="type">
+          <mat-radio-button [value]="animalTypeEnum.CAT">Cat</mat-radio-button>
+          <mat-radio-button [value]="animalTypeEnum.DOG">Dog</mat-radio-button>
+          <mat-radio-button [value]="animalTypeEnum.ALL">All</mat-radio-button>
+        </mat-radio-group>
+      </form>
+
+      <mat-grid-list [cols]="3" class="animals-list--grid" *ngIf="animals.length > 0">
+        <mat-grid-tile *ngFor="let animal of animals">
+          <img [src]="animal.photo" [alt]="animal.name" class="animals-list--grid__img">
+          <div class="animals-list--grid__info">
+            <ul class="list-unstyled">
+              <li>Name: {{animal.name}}</li>
+              <li>Gender: {{animal.gender}}</li>
+              <li>Age: {{animal.age}}</li>
+              <li>Breed: {{animal.breed}}</li>
+            </ul>
+
+            <button mat-raised-button type="button" color="primary" (click)="goTo(animal.id)">Details...</button>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+
+      <p *ngIf="animals.length < 1">No results</p>
+
+      <button *ngIf="!isLastPage" mat-button type="button" color="primary" class="animals-list--btn" (click)="showMore()">Show More</button>
+
+    </mat-card-content>
+  </mat-card>
+
+</section>

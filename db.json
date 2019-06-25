@@ -1,0 +1,234 @@
+{
+  "animals": [
+    {
+      "id": 1,
+      "type": "CAT",
+      "name": "Jack",
+      "breed": "breed1",
+      "description": "description",
+      "gender": "MALE",
+      "age": "1, year(s)",
+      "photo": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+    },
+    {
+      "id": 2,
+      "type": "DOG",
+      "name": "Joly",
+      "breed": "breed2",
+      "description": "description",
+      "gender": "MALE",
+      "age": "2 year(s)",
+      "photo": "https://alldogsmatter.co.uk/wp-content/uploads/33-IMG_3200-1000x667.jpg"
+    },
+    {
+      "id": 3,
+      "type": "CAT",
+      "name": "John",
+      "breed": "breed3",
+      "description": "description",
+      "gender": "MALE",
+      "age": "3 year(s)",
+      "photo": "http://lovecats.org/wp-content/uploads/2017/03/catsitinbox-1000x667.jpg"
+    },
+    {
+      "id": 4,
+      "type": "DOG",
+      "name": "Mo",
+      "breed": "breed4",
+      "description": "description",
+      "gender": "MALE",
+      "age": "4 year(s)",
+      "photo": "https://www.noozhawk.com/images/uploads/092818-Puppy-Recovering-3-1000x667.jpg"
+    },
+    {
+      "id": 5,
+      "type": "CAT",
+      "name": "Miss",
+      "breed": "breed5",
+      "description": "description",
+      "gender": "FEMALE",
+      "age": "5 year(s)",
+      "photo": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+    },
+    {
+      "id": 6,
+      "type": "CAT",
+      "name": "Aaron",
+      "breed": "breed6",
+      "description": "description",
+      "gender": "MALE",
+      "age": "6 year(s)",
+      "photo": "http://lovecats.org/wp-content/uploads/2017/03/catsitinbox-1000x667.jpg"
+    },
+    {
+      "id": 7,
+      "type": "CAT",
+      "name": "Petro",
+      "breed": "breed7",
+      "description": "description",
+      "gender": "MALE",
+      "age": "7 year(s)",
+      "photo": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+    },
+    {
+      "id": 8,
+      "type": "DOG",
+      "name": "Peter",
+      "breed": "breed8",
+      "description": "description",
+      "gender": "MALE",
+      "age": "8 year(s)",
+      "photo": "https://alldogsmatter.co.uk/wp-content/uploads/33-IMG_3200-1000x667.jpg"
+    },
+    {
+      "id": 9,
+      "type": "CAT",
+      "name": "Lily",
+      "breed": "breed9",
+      "description": "description",
+      "gender": "FEMALE",
+      "age": "9 year(s)",
+      "photo": "http://lovecats.org/wp-content/uploads/2017/03/catsitinbox-1000x667.jpg"
+    },
+    {
+      "id": 10,
+      "type": "CAT",
+      "name": "Rose",
+      "breed": "breed10",
+      "description": "description",
+      "gender": "FEMALE",
+      "age": "10 year(s)",
+      "photo": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+    },
+    {
+      "id": 11,
+      "type": "DOG",
+      "name": "Kate",
+      "breed": "breed11",
+      "description": "description",
+      "gender": "FEMALE",
+      "age": "11 year(s)",
+      "photo": "https://www.noozhawk.com/images/uploads/092818-Puppy-Recovering-3-1000x667.jpg"
+    },
+    {
+      "id": 12,
+      "type": "DOG",
+      "name": "Robert",
+      "breed": "breed12",
+      "description": "description",
+      "gender": "MALE",
+      "age": "12 year(s)",
+      "photo": "https://alldogsmatter.co.uk/wp-content/uploads/33-IMG_3200-1000x667.jpg"
+    },
+    {
+      "id": 13,
+      "type": "CAT",
+      "name": "Will",
+      "breed": "breed13",
+      "description": "description",
+      "gender": "MALE",
+      "age": "13 year(s)",
+      "photo": "http://lovecats.org/wp-content/uploads/2017/03/catsitinbox-1000x667.jpg"
+    },
+    {
+      "id": 14,
+      "type": "CAT",
+      "name": "Cas",
+      "breed": "breed14",
+      "description": "description",
+      "gender": "MALE",
+      "age": "14 year(s)",
+      "photo": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+    },
+    {
+      "id": 15,
+      "type": "DOG",
+      "name": "Laura",
+      "breed": "breed15",
+      "description": "description",
+      "gender": "FEMALE",
+      "age": "15 year(s)",
+      "photo": "https://www.noozhawk.com/images/uploads/092818-Puppy-Recovering-3-1000x667.jpg"
+    },
+    {
+      "id": 16,
+      "type": "CAT",
+      "name": "Joker",
+      "breed": "breed16",
+      "description": "description",
+      "gender": "MALE",
+      "age": "16 year(s)",
+      "photo": "http://lovecats.org/wp-content/uploads/2017/03/catsitinbox-1000x667.jpg"
+    },
+    {
+      "id": 17,
+      "type": "CAT",
+      "name": "Jack",
+      "breed": "breed17",
+      "description": "description",
+      "gender": "MALE",
+      "age": "17 year(s)",
+      "photo": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+    },
+    {
+      "id": 18,
+      "type": "DOG",
+      "name": "Max",
+      "breed": "breed18",
+      "description": "description",
+      "gender": "MALE",
+      "age": "18 year(s)",
+      "photo": "https://alldogsmatter.co.uk/wp-content/uploads/33-IMG_3200-1000x667.jpg"
+    },
+    {
+      "id": 19,
+      "type": "CAT",
+      "name": "Killer",
+      "breed": "breed19",
+      "description": "description",
+      "gender": "FEMALE",
+      "age": "19 year(s)",
+      "photo": "http://lovecats.org/wp-content/uploads/2017/03/catsitinbox-1000x667.jpg"
+    },
+    {
+      "id": 20,
+      "type": "DOG",
+      "name": "Felix",
+      "breed": "breed20",
+      "description": "description",
+      "gender": "MALE",
+      "age": "20 year(s)",
+      "photo": "https://www.noozhawk.com/images/uploads/092818-Puppy-Recovering-3-1000x667.jpg"
+    },
+    {
+      "id": 21,
+      "type": "DOG",
+      "name": "Jones",
+      "breed": "breed21",
+      "description": "description",
+      "gender": "MALE",
+      "age": "21 year(s)",
+      "photo": "https://alldogsmatter.co.uk/wp-content/uploads/33-IMG_3200-1000x667.jpg"
+    },
+    {
+      "id": 22,
+      "type": "CAT",
+      "name": "Any",
+      "breed": "breed22",
+      "description": "description",
+      "gender": "FEMALE",
+      "age": "22 year(s)",
+      "photo": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+    },
+    {
+      "id": 23,
+      "type": "CAT",
+      "name": "Fray",
+      "breed": "breed23",
+      "description": "description",
+      "gender": "FEMALE",
+      "age": "23 year(s)",
+      "photo": "http://lovecats.org/wp-content/uploads/2017/03/catsitinbox-1000x667.jpg"
+    }
+  ]
+}

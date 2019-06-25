@@ -1,0 +1,10 @@
+// File to restyle default material elements
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+.mat-grid-tile .mat-figure {
+  flex-direction: column;
+  align-items:    flex-start!important;
+}

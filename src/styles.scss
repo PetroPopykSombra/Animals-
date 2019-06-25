@@ -1,0 +1,22 @@
+// Global styles
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "app/shared/app-material/app-material";
+
+html, body {
+  padding:     0;
+  margin:      0;
+  height:      100%;
+  width:       100%;
+  zoom:        1;
+  font-family: sans-serif;
+  font-size:   18px;
+  font-weight: 400;
+}
+
+h1 {
+  margin: auto 0;
+}
+
+* {
+  box-sizing: border-box;
+}
