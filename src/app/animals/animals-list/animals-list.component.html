@@ -32,7 +32,8 @@
               <li>Breed: {{animal.breed}}</li>
             </ul>
 
-            <button mat-raised-button type="button" color="primary" (click)="goTo(animal.id)">Details...</button>
+            <button *ngIf="!animal.isAdopted" mat-raised-button type="button" color="primary" (click)="goTo(animal)">Details...</button>
+            <span class="message message--success" *ngIf="animal.isAdopted">Adopted!</span>
           </div>
         </mat-grid-tile>
       </mat-grid-list>

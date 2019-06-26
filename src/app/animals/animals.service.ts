@@ -9,6 +9,8 @@ import { Animal } from './animals.model';
 })
 export class AnimalsService {
 
+  private readonly animalsUrl = 'animals';
+
   constructor(
     private httpService: HttpService,
   ) {}
@@ -16,6 +18,14 @@ export class AnimalsService {
   getAnimals(pageNumber: number): Observable<object> {
     let params = new HttpParams();
     params = params.append('_page', pageNumber.toString());
-    return this.httpService.get<Animal[]>(`animals`, params);
+    return this.httpService.get<Animal[]>(this.animalsUrl, params);
+  }
+
+  getAnimal(id: number): Observable<object> {
+    return this.httpService.get<Animal>(`${this.animalsUrl}/${id}`);
+  }
+
+  adoptAnimal(data: Animal): Observable<object> {
+    return this.httpService.put<Animal>(`${this.animalsUrl}/${data.id}`, data);
   }
 }

@@ -3,6 +3,7 @@
     {
       "id": 1,
       "type": "CAT",
+      "isAdopted": false,
       "name": "Jack",
       "breed": "breed1",
       "description": "description",
@@ -13,6 +14,7 @@
     {
       "id": 2,
       "type": "DOG",
+      "isAdopted": false,
       "name": "Joly",
       "breed": "breed2",
       "description": "description",
@@ -23,6 +25,7 @@
     {
       "id": 3,
       "type": "CAT",
+      "isAdopted": false,
       "name": "John",
       "breed": "breed3",
       "description": "description",
@@ -33,6 +36,7 @@
     {
       "id": 4,
       "type": "DOG",
+      "isAdopted": false,
       "name": "Mo",
       "breed": "breed4",
       "description": "description",
@@ -43,6 +47,7 @@
     {
       "id": 5,
       "type": "CAT",
+      "isAdopted": false,
       "name": "Miss",
       "breed": "breed5",
       "description": "description",
@@ -53,6 +58,7 @@
     {
       "id": 6,
       "type": "CAT",
+      "isAdopted": false,
       "name": "Aaron",
       "breed": "breed6",
       "description": "description",
@@ -63,6 +69,7 @@
     {
       "id": 7,
       "type": "CAT",
+      "isAdopted": false,
       "name": "Petro",
       "breed": "breed7",
       "description": "description",
@@ -73,6 +80,7 @@
     {
       "id": 8,
       "type": "DOG",
+      "isAdopted": false,
       "name": "Peter",
       "breed": "breed8",
       "description": "description",
@@ -83,6 +91,7 @@
     {
       "id": 9,
       "type": "CAT",
+      "isAdopted": false,
       "name": "Lily",
       "breed": "breed9",
       "description": "description",
@@ -93,6 +102,7 @@
     {
       "id": 10,
       "type": "CAT",
+      "isAdopted": false,
       "name": "Rose",
       "breed": "breed10",
       "description": "description",
@@ -103,6 +113,7 @@
     {
       "id": 11,
       "type": "DOG",
+      "isAdopted": false,
       "name": "Kate",
       "breed": "breed11",
       "description": "description",
@@ -113,6 +124,7 @@
     {
       "id": 12,
       "type": "DOG",
+      "isAdopted": false,
       "name": "Robert",
       "breed": "breed12",
       "description": "description",
@@ -123,6 +135,7 @@
     {
       "id": 13,
       "type": "CAT",
+      "isAdopted": false,
       "name": "Will",
       "breed": "breed13",
       "description": "description",
@@ -133,6 +146,7 @@
     {
       "id": 14,
       "type": "CAT",
+      "isAdopted": false,
       "name": "Cas",
       "breed": "breed14",
       "description": "description",
@@ -143,6 +157,7 @@
     {
       "id": 15,
       "type": "DOG",
+      "isAdopted": false,
       "name": "Laura",
       "breed": "breed15",
       "description": "description",
@@ -153,6 +168,7 @@
     {
       "id": 16,
       "type": "CAT",
+      "isAdopted": false,
       "name": "Joker",
       "breed": "breed16",
       "description": "description",
@@ -163,6 +179,7 @@
     {
       "id": 17,
       "type": "CAT",
+      "isAdopted": false,
       "name": "Jack",
       "breed": "breed17",
       "description": "description",
@@ -173,6 +190,7 @@
     {
       "id": 18,
       "type": "DOG",
+      "isAdopted": false,
       "name": "Max",
       "breed": "breed18",
       "description": "description",
@@ -183,6 +201,7 @@
     {
       "id": 19,
       "type": "CAT",
+      "isAdopted": false,
       "name": "Killer",
       "breed": "breed19",
       "description": "description",
@@ -193,6 +212,7 @@
     {
       "id": 20,
       "type": "DOG",
+      "isAdopted": false,
       "name": "Felix",
       "breed": "breed20",
       "description": "description",
@@ -203,6 +223,7 @@
     {
       "id": 21,
       "type": "DOG",
+      "isAdopted": false,
       "name": "Jones",
       "breed": "breed21",
       "description": "description",
@@ -213,6 +234,7 @@
     {
       "id": 22,
       "type": "CAT",
+      "isAdopted": false,
       "name": "Any",
       "breed": "breed22",
       "description": "description",
@@ -223,6 +245,7 @@
     {
       "id": 23,
       "type": "CAT",
+      "isAdopted": false,
       "name": "Fray",
       "breed": "breed23",
       "description": "description",

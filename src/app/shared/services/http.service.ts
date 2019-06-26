@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
 
@@ -12,7 +12,11 @@ export class HttpService {
     private http: HttpClient,
   ) {}
 
-  public get<T>(url: string, queryParams?: any): Observable<Object> {
+  public get<T>(url: string, queryParams?: HttpParams): Observable<Object> {
     return this.http.get(environment.APIPath + url, {params: queryParams});
+  }
+
+  public put<T>(url: string, body: object): Observable<Object> {
+    return this.http.put(environment.APIPath + url, body);
   }
 }

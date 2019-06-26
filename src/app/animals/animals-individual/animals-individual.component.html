@@ -1,3 +1,18 @@
-<p>
-  animals-individual works!
-</p>
+<section class="animals-individual page">
+  <mat-card>
+    <h1>{{animal.name}}</h1>
+    <mat-card-content class="animals-individual--wrapper">
+      <ul class="list-unstyled">
+        <li>Age: {{animal.age}}</li>
+        <li>Gender: {{animal.gender}}</li>
+        <li>Breed: {{animal.breed}}</li>
+        <li>About: {{animal.description}}</li>
+      </ul>
+      <img [src]="animal.photo" [alt]="animal.name" class="animals-individual--wrapper__img">
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button *ngIf="!animal.isAdopted" mat-raised-button type="button" color="primary" (click)="adoptAnimal()">Adopt!</button>
+    </mat-card-actions>
+  </mat-card>
+</section>

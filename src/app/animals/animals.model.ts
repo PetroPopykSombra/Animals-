@@ -8,6 +8,7 @@ export class Animal {
     public age = '',
     public breed = '',
     public id = null,
+    public isAdopted = false
   ) {}
 
 }
@@ -22,5 +23,12 @@ export enum AnimalTypeEnum {
   CAT = 'CAT',
   DOG = 'DOG',
   ALL = 'ALL',
+}
+
+export interface FilterOptions {
+  name: string;
+  type: AnimalTypeEnum;
+  gender: AnimalGenderEnum;
+  breed: string;
 }
 

@@ -1,0 +1,14 @@
+@import "../../shared/styles/core";
+
+.animals-individual {
+  &--wrapper {
+    display:         flex;
+    justify-content: space-around;
+    align-items:     center;
+
+    &__img {
+      width:  500px;
+      height: auto;
+    }
+  }
+}

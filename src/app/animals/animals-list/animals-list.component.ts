@@ -1,11 +1,12 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { MatSnackBar } from '@angular/material';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { Animal, AnimalGenderEnum, AnimalTypeEnum } from '../animals.model';
+import { SharedService } from '../../shared/services/shared.service';
+import { SnackbarService } from '../../shared/services/snackbar.service';
+import { Animal, AnimalGenderEnum, AnimalTypeEnum, FilterOptions } from '../animals.model';
 import { AnimalsService } from '../animals.service';
 
 @Component({
@@ -21,41 +22,39 @@ export class AnimalsListComponent implements OnInit, OnDestroy {
   public isLastPage = false;
   public form: FormGroup;
 
-  private page: number;
+  private page = 1;
   private initialArray = [] as Animal[];
   private unsubscribe$ = new Subject<void>();
 
   constructor(
     private animalsService: AnimalsService,
-    private snackbar: MatSnackBar,
     private fb: FormBuilder,
-    private router: Router
+    private router: Router,
+    private sharedService: SharedService,
+    private snackbarService: SnackbarService
   ) { }
 
   ngOnInit() {
-    this.page = 1;
     this.createForm();
     this.getAnimals();
     this.initFormChangeSubscriber();
   }
 
-  ngOnDestroy() {
-    this.unsubscribe$.next();
-    this.unsubscribe$.complete();
-  }
-
   private getAnimals(): void {
-    this.animalsService.getAnimals(this.page).pipe(takeUntil(this.unsubscribe$)).subscribe(
+    this.animalsService.getAnimals(this.page)
+    .pipe(takeUntil(this.unsubscribe$))
+    .subscribe(
       (data: Animal[]) => {
         this.copyArray(data);
         this.animals = this.animals.concat(data);
+        // Initial filtering & filtering after pagination
         this.filterList(this.form.value);
         if (data.length < 10) {
           this.isLastPage = true;
         }
       },
       (error: HttpErrorResponse) => {
-        this.snackbar.open(error.message);
+        this.snackbarService.snackbarSubject.next(error.message);
       }
     );
   }
@@ -70,44 +69,54 @@ export class AnimalsListComponent implements OnInit, OnDestroy {
   }
 
   private copyArray(data: Animal[]): void {
+    // Creating copy of initial array to compare with later
     this.initialArray = this.initialArray.concat(JSON.parse(JSON.stringify(data)));
   }
 
-  private filterList(res): void {
-    this.animals = this.initialArray.filter(item => this.filterFields(item, res));
+  private filterList(filters: FilterOptions): void {
+    // Comparing array with initial values
+    this.animals = this.initialArray.filter(item => this.filterFields(item, filters));
   }
 
-  private filterFields(animalItem: Animal, res): boolean {
-    if (res.type === AnimalTypeEnum.ALL && res.gender === AnimalGenderEnum.ALL) {
-      return animalItem.name.toUpperCase().includes(res.name.toUpperCase()) ||
-             animalItem.breed.toUpperCase().includes(res.name.toUpperCase());
+  private filterFields(animalItem: Animal, filters: FilterOptions): boolean {
+    // Filter function
+    if (filters.type === AnimalTypeEnum.ALL && filters.gender === AnimalGenderEnum.ALL) {
+      return animalItem.name.toUpperCase().includes(filters.name.toUpperCase()) ||
+             animalItem.breed.toUpperCase().includes(filters.name.toUpperCase());
     }
 
-    if (res.gender === AnimalGenderEnum.ALL) {
-      return (animalItem.name.toUpperCase().includes(res.name.toUpperCase()) ||
-              animalItem.breed.toUpperCase().includes(res.name.toUpperCase())) && animalItem.type === res.type;
+    if (filters.gender === AnimalGenderEnum.ALL) {
+      return (animalItem.name.toUpperCase().includes(filters.name.toUpperCase()) ||
+              animalItem.breed.toUpperCase().includes(filters.name.toUpperCase())) && animalItem.type === filters.type;
     }
 
-    if (res.type === AnimalTypeEnum.ALL) {
-      return (animalItem.name.toUpperCase().includes(res.name.toUpperCase()) ||
-              animalItem.breed.toUpperCase().includes(res.name.toUpperCase())) && animalItem.gender === res.gender;
+    if (filters.type === AnimalTypeEnum.ALL) {
+      return (animalItem.name.toUpperCase().includes(filters.name.toUpperCase()) ||
+              animalItem.breed.toUpperCase().includes(filters.name.toUpperCase())) && animalItem.gender === filters.gender;
     }
 
-    return (animalItem.name.toUpperCase().includes(res.name.toUpperCase()) ||
-            animalItem.breed.toUpperCase().includes(res.name.toUpperCase())) && animalItem.gender === res.gender && animalItem.type ===
-           res.type;
+    return (animalItem.name.toUpperCase().includes(filters.name.toUpperCase()) ||
+            animalItem.breed.toUpperCase().includes(filters.name.toUpperCase())) && animalItem.gender === filters.gender &&
+           animalItem.type === filters.type;
   }
 
   private initFormChangeSubscriber(): void {
-    this.form.valueChanges.pipe(takeUntil(this.unsubscribe$)).subscribe(res => this.filterList(res));
+    // Detecting reactive form change to filter after
+    this.form.valueChanges.pipe(takeUntil(this.unsubscribe$)).subscribe(filters => this.filterList(filters));
   }
 
-  public goTo(id: number): void {
-    this.router.navigate([`animals/${id}`]);
+  public goTo(animal: Animal): void {
+    this.sharedService.changeObject(animal);
+    this.router.navigate([`animals/${animal.id}`]);
   }
 
   public showMore(): void {
     this.page++;
     this.getAnimals();
+  }
+
+  ngOnDestroy() {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
   }
 }
