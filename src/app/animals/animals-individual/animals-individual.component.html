@@ -7,8 +7,14 @@
         <li>Gender: {{animal.gender}}</li>
         <li>Breed: {{animal.breed}}</li>
         <li>About: {{animal.description}}</li>
+        <li>Medical notes: {{animal.medicalNotes}}</li>
       </ul>
-      <img [src]="animal.photo" [alt]="animal.name" class="animals-individual--wrapper__img">
+
+      <swiper class="animals-individual--wrapper__slider">
+        <div *ngFor="let img of animal.photos">
+          <img [src]="img" [alt]="animal.name" class="animals-individual--wrapper__slider--img">
+        </div>
+      </swiper>
     </mat-card-content>
 
     <mat-card-actions>

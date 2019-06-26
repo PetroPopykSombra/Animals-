@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppMaterialModule } from '../shared/app-material/app-material.module';
+import { SwiperMaterialModule } from '../shared/swiper/swiper-material.module';
 import { AnimalsListComponent } from './animals-list/animals-list.component';
 import { AnimalsRoutingModule } from './animals.routing.module';
 import { AnimalsIndividualComponent } from './animals-individual/animals-individual.component';
-
 
 @NgModule({
   imports: [
@@ -13,7 +13,8 @@ import { AnimalsIndividualComponent } from './animals-individual/animals-individ
     FormsModule,
     AppMaterialModule,
     ReactiveFormsModule,
-    AnimalsRoutingModule
+    AnimalsRoutingModule,
+    SwiperMaterialModule
   ],
   declarations: [
     AnimalsListComponent,

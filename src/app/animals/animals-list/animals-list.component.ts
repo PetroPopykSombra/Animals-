@@ -102,7 +102,9 @@ export class AnimalsListComponent implements OnInit, OnDestroy {
 
   private initFormChangeSubscriber(): void {
     // Detecting reactive form change to filter after
-    this.form.valueChanges.pipe(takeUntil(this.unsubscribe$)).subscribe(filters => this.filterList(filters));
+    this.form.valueChanges
+      .pipe(takeUntil(this.unsubscribe$))
+      .subscribe(filters => this.filterList(filters));
   }
 
   public goTo(animal: Animal): void {

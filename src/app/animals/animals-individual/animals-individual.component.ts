@@ -27,6 +27,10 @@ export class AnimalsIndividualComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
+    this.getCurrentObject();
+  }
+
+  private getCurrentObject(): void {
     this.sharedService.currentObject
     .pipe(takeUntil(this.unsubscribe$))
     .subscribe(

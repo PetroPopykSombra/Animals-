@@ -16,8 +16,9 @@ export class AnimalsService {
   ) {}
 
   getAnimals(pageNumber: number): Observable<object> {
-    let params = new HttpParams();
-    params = params.append('_page', pageNumber.toString());
+    const params = new HttpParams()
+      .set('_page', pageNumber.toString());
+
     return this.httpService.get<Animal[]>(this.animalsUrl, params);
   }
 
