@@ -28,13 +28,7 @@ module.exports = function (config) {
     files: [
       { pattern: "app/**/*_spec.ts", watched: false, served: true, included: true }
     ],
-               browsers: ['Chrome, ChromeHeadless, ChromeHeadless_without_security'],
-               customLaunchers: {
-                 ChromeHeadless_without_security: {
-                   base: 'ChromeHeadless',
-                   flags: ['--disable-web-security']
-                 }
-               },
+    browsers: ['Chrome'],
     singleRun: true
   });
 };
