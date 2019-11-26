@@ -25,7 +25,11 @@ export class AppComponent implements OnInit, OnDestroy {
   private snackbarSubscriber(): void {
     this.snackbarService.snackbarSubject
     .pipe(takeUntil(this.unsubscribe$))
-    .subscribe((res: string) => this.snackbar.open(res));
+    .subscribe(
+      (res: string) => {
+        this.snackbar.open(res);
+      }
+    );
   }
 
   ngOnDestroy() {
