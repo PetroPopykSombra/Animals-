@@ -93,7 +93,7 @@
     {
       "id": 7,
       "type": "CAT",
-      "isAdopted": false,
+      "isAdopted": true,
       "name": "Petro",
       "breed": "breed7",
       "description": "description",
