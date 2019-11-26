@@ -2,7 +2,8 @@
   "name": "animals",
   "version": "0.0.0",
   "engines": {
-    "node": "12.x"
+    "node": "12.x",
+    "npm": "6.x"
   },
   "scripts": {
     "ng": "ng",
@@ -13,7 +14,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "pretty-quick": "pretty-quick",
-    "postinstall": "ng build"
+    "heroku-postbuild": "ng build --prod"
   },
   "private": true,
   "dependencies": {
