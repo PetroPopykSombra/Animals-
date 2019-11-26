@@ -22,8 +22,8 @@ export class AnimalsIndividualComponent implements OnInit, OnDestroy {
   constructor(
     private sharedService: SharedService,
     private route: ActivatedRoute,
-    public animalsService: AnimalsService,
-    public snackbarService: SnackbarService
+    private animalsService: AnimalsService,
+    private snackbarService: SnackbarService
   ) { }
 
   ngOnInit() {
@@ -48,14 +48,24 @@ export class AnimalsIndividualComponent implements OnInit, OnDestroy {
   private getPetId(): void {
     this.route.params
     .pipe(takeUntil(this.unsubscribe$))
-    .subscribe((params: Params) => this.animal.id = params['id']);
+    .subscribe(
+      (params: Params) => {
+        this.animal.id = params['id'];
+      }
+    );
   }
 
   private getPet(): void {
     this.animalsService.getAnimal(this.animal.id)
     .pipe(takeUntil(this.unsubscribe$))
-    .subscribe((data: Animal) => this.animal = data,
-      (error: HttpErrorResponse) => this.snackbarService.snackbarSubject.next(error.message));
+    .subscribe(
+      (data: Animal) => {
+        this.animal = data;
+      },
+      (error: HttpErrorResponse) => {
+        this.snackbarService.snackbarSubject.next(error.message);
+      }
+    );
   }
 
   public adoptAnimal(): void {

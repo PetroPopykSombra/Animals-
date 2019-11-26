@@ -18,18 +18,18 @@ export class AnimalsListComponent implements OnInit, OnDestroy {
 
   public readonly animalTypeEnum = AnimalTypeEnum;
   public readonly animalGenderEnum = AnimalGenderEnum;
-  public animals: Animal[] = [];
+  public animals = [] as Animal[];
   public isLastPage = false;
   public form: FormGroup;
 
   private page = 1;
-  private initialArray: Animal[] = [];
-  private unsubscribe$: Subject<void> = new Subject<void>();
+  private initialArray = [] as Animal[];
+  private unsubscribe$ = new Subject<void>();
 
   constructor(
     private animalsService: AnimalsService,
     private fb: FormBuilder,
-    public router: Router,
+    private router: Router,
     private sharedService: SharedService,
     private snackbarService: SnackbarService
   ) { }
