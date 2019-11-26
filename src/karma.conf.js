@@ -24,10 +24,7 @@ module.exports = function (config) {
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
-    autoWatch: true,
-    files: [
-      { pattern: "app/**/*_spec.ts", watched: false, served: true, included: true }
-    ],
+    autoWatch: false,
     browsers: ['Chrome'],
     singleRun: true
   });
