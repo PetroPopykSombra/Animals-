@@ -108,7 +108,7 @@
     {
       "id": 8,
       "type": "DOG",
-      "isAdopted": false,
+      "isAdopted": true,
       "name": "Peter",
       "breed": "breed8",
       "description": "description",

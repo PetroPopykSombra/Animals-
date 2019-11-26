@@ -28,7 +28,7 @@ module.exports = function (config) {
     files: [
       { pattern: "app/**/*_spec.ts", watched: false, served: true, included: true }
     ],
-    browsers: ['Chrome'],
+    browsers: ['ChromeHeadless'],
     singleRun: true
   });
 };
