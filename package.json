@@ -14,7 +14,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "pretty-quick": "pretty-quick",
-    "heroku-postbuild": "ng build"
+    "heroku-postbuild": "ng build & json-server --watch db.json",
+    "heroku-prebuild": "ng test"
   },
   "private": true,
   "dependencies": {
