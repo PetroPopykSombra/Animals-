@@ -117,7 +117,7 @@ describe('AnimalsListComponent', () => {
       expect(fixture1.componentInstance.adoptAnimal).toHaveBeenCalled();
       fixture1.componentInstance.animalsService.adoptAnimal(fixture1.componentInstance.animal).subscribe(
         () => {
-          expect(fixture1.componentInstance.snackbarService.snackbarSubject.next).toHaveBeenCalledWith('You have adopted this animal!');
+          expect(fixture1.componentInstance.snackbarService.snackbarSubject.next).toHaveBeenCalledWith('You have adoptdwdffded this animal!');
         }
       );
     }));

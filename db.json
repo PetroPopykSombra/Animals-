@@ -303,7 +303,7 @@
     {
       "id": 21,
       "type": "DOG",
-      "isAdopted": false,
+      "isAdopted": true,
       "name": "Jones",
       "breed": "breed21",
       "description": "description",
