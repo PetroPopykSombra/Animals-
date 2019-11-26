@@ -73,7 +73,7 @@ describe('AnimalsListComponent', () => {
       component.animals.fill(new Animal('name', AnimalTypeEnum.CAT, AnimalGenderEnum.FEMALE, '1', '1', [], '1', '1', '555', false));
       fixture.detectChanges();
       const elementsArray = fixture.debugElement.queryAll(By.css('.animals-list--grid__img'));
-      expect(elementsArray.length).toEqual(120);
+      expect(elementsArray.length).toEqual(10);
       spyOn(component, 'showMore');
       const btn = fixture.debugElement.query(By.css('.animals-list--btn')).nativeElement;
       btn.click();
