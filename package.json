@@ -2,7 +2,7 @@
   "name": "animals",
   "version": "0.0.0",
   "engines": {
-    "node": "12.11.1"
+    "node": "12.x"
   },
   "scripts": {
     "ng": "ng",
@@ -12,7 +12,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "pretty-quick": "pretty-quick"
+    "pretty-quick": "pretty-quick",
+    "heroku-postbuild": "ng build"
   },
   "private": true,
   "dependencies": {
