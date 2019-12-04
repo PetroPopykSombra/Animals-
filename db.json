@@ -93,7 +93,7 @@
     {
       "id": 7,
       "type": "CAT",
-      "isAdopted": false,
+      "isAdopted": true,
       "name": "Petro",
       "breed": "breed7",
       "description": "description",
@@ -108,7 +108,7 @@
     {
       "id": 8,
       "type": "DOG",
-      "isAdopted": false,
+      "isAdopted": true,
       "name": "Peter",
       "breed": "breed8",
       "description": "description",
@@ -303,7 +303,7 @@
     {
       "id": 21,
       "type": "DOG",
-      "isAdopted": false,
+      "isAdopted": true,
       "name": "Jones",
       "breed": "breed21",
       "description": "description",

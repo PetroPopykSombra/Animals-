@@ -1,11 +1,11 @@
 <section class="animals-list page">
   <mat-card>
-    <h1>Filters</h1>
+    <h1>Filter</h1>
 
     <mat-card-content>
       <form [formGroup]="form" class="animals-list--form">
         <mat-form-field>
-          <input matInput formControlName="name" placeholder="Name/Breed">
+          <input matInput formControlName="name" placeholder="Name/Breed" autocomplete="off">
         </mat-form-field>
 
         <mat-radio-group aria-label="Gender" formControlName="gender">
@@ -32,13 +32,13 @@
               <li>Breed: {{animal.breed}}</li>
             </ul>
 
-            <button *ngIf="!animal.isAdopted" mat-raised-button type="button" color="primary" (click)="goTo(animal)">Details...</button>
+            <button *ngIf="!animal.isAdopted" mat-raised-button type="button" color="primary" (click)="goTo(animal)" class="details-btn">Details...</button>
             <span class="message message--success" *ngIf="animal.isAdopted">Adopted!</span>
           </div>
         </mat-grid-tile>
       </mat-grid-list>
 
-      <p *ngIf="!animals?.length">No results</p>
+      <p *ngIf="!animals?.length" class="no-results">No results</p>
 
       <button *ngIf="!isLastPage" mat-button type="button" color="primary" class="animals-list--btn" (click)="showMore()">Show More</button>
 
