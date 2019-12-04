@@ -55,7 +55,7 @@ describe('AnimalsListComponent', () => {
   describe('integration tests', () => {
     it('animals list container should be defined on UI', (() => {
       const element: DebugElement = fixture.debugElement.query(By.css('.animals-list'));
-      expect(element).toBeDefined();
+      expect(element).not.toBeDefined();
     }));
 
     it('details-btn should navigate to details page', (() => {
