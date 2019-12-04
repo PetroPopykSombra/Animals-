@@ -37,3 +37,13 @@ jobs:
 
       # run tests!
       - run: npm test
+
+  deploy:
+    docker:
+      - image: buildpack-deps:trusty
+    steps:
+      - checkout
+      - run:
+          name: Deploy Master to Heroku
+          command: |
+            git push https://heroku:12345@git.heroku.com/animals-adopting.git master
